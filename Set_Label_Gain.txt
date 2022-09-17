@@ -1,0 +1,27 @@
+# Machine-Learning
+Predict cabbage prices
+
+# " 設立漲跌Lebel "
+Recall = TP/(TP+FN)  ,  Specificity = TN/(TN+FP)
+# 第一次(Accruacy[0.4])              
++5%       ->   2      
++15%      ->   1      
+-5%~5%    ->   0       
+-5%       -> (-1)
+-15%      -> (-2)
+# 第二次(Accuracy[0.7],Recall高,Specificity低)
++50%      ->   2
++0%~50%   ->   1
+-0%~-50%  -> (-1)
+-50%      -> (-2)
+# 第三次(Accuracy[0.4],gain漲幅區間)
+0~25%     ->   2
+25~50%    ->   1
+50~75%    -> (-1)
+75~100%   -> (-2)
+# 第四次(Accuracy[0.7],Recall/Specificity都有效提升)
+Average gain = 0.0138 
+Std =  0.174350
+Up = 0.188199     ->2
+Up~Down           ->1
+Down = -0.160501  ->0
